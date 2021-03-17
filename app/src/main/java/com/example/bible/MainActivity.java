@@ -20,7 +20,7 @@ import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView jan,feb;
+    TextView jan,feb,mar;
     private static final int MY_PERMISSION_STORAGE = 1111;
 
     @Override
@@ -44,7 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplication(),FebActivity.class));
             }
         });
-
+        mar = findViewById(R.id.mar);
+        mar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplication(),MarActivity.class));
+            }
+        });
     }
     private void checkPermission(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
