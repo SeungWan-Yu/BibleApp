@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MayActivity"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +22,8 @@
         <activity android:name=".JanActivity" />
         <activity android:name=".FebActivity" />
         <activity android:name=".MarActivity" />
-        <activity android:name=".MainActivity">
-
-
-        </activity>
+        <activity android:name=".AprActivity" />
+        <activity android:name=".MainActivity"></activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -36,8 +35,8 @@
                 android:resource="@xml/file_path" />
         </provider>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

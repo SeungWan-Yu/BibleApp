@@ -6,23 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="100"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="24dp"
-            android:layout_weight="15"
-            android:orientation="vertical">
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textView"
@@ -30,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="매일만나"
                 android:textColor="#7A2E00"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -38,79 +37,99 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="1"
-                android:textColor="#009688"
-                android:textSize="18sp" />
+                android:text="5"
+                android:textColor="@color/may"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/captuer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/button_may1"
+                android:text="캡처"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="사무엘상 10-31\n사무엘하 1-24\n열왕기상 1-22\n열왕기하 1-25\n로마서 1-3\n시편121 - 150,1"
+                android:textColor="#432D2D"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="70"
-            android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="40dp">
-
-                <Button
-                    android:id="@+id/button45"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/image1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:gravity="right"
-                    android:text='"태초에 하나님이 천지를 창조 하시니라"'
+                    android:gravity="center"
+                    android:text='"하나님의 뜻 안에서 너희에게로\n나아갈 좋은 길 얻기를 구하노라"(롬12:1)'
                     android:textColor="#7A2E00"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left"
-                    android:text=" (창1:1)"
-                    android:textColor="#7A2E00"
-                    android:textSize="12sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:gravity="left"
                     android:lineSpacingExtra="4sp"
-                    android:text="'태초'는 하나님께서 우주와 지구를 창조하신 때를 말합니다.\n성경은 태초에 하나님께서 천지를 창조하셨다는 선언으로 시작합니다.\n하나님은 창조주이십니다. 성경의 첫 구절은 '하나님이 계시는가'\n'하나님은 어떤 분이신가?'에 대한 구구한 설명도 없이 하나님께서\n천지를 창조하셨음을 선포하고 있습니다. 이 성경 말씀은 사람에게 믿어\n달라고 구차하게 동정을 구하지 않습니다. 다만, 피조물에게는 창조주를\n찾아야 하는 영적 요구와 책임이 있고, 진리를 간절히 찾는 마음으로\n성경을 대해야 할 의무가 있습니다."
+                    android:text="하나님은 훈련과 연습을 통해서 그리고 절제와 인내를 통해서 그 사람을\n쓰십니다. 내 자신을 하나님께 드리는 훈련도 필요한 것입니다. 하나님의\n뜻이 나타날 때까지 기다리는 훈련,절제하는 훈련,연습하고 훈련해서\n주님 앞에 우리 자신을 드리면 쓰시도록, 주님이 쓰시기에 예비 된 그릇\n준비된 그릇이 될 수 있을 것입니다. 그러면 귀히 쓰임 받느 그릇이 될\n것입니다."
                     android:textColor="#000000"
-                    android:textSize="10sp"
+                    android:textSize="9sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -118,49 +137,41 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:layout_weight="1"
                     android:gravity="right"
-                    android:text="-창세기 강해 / 이요한p"
+                    android:text="- 수요말씀 / 신용철"
                     android:textColor="#000000"
-                    android:textSize="10sp" />
+                    android:textSize="7sp" />
 
             </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="15"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView11"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="창세기 1-50\n마태복음 1-28\n출애굽기 1-15\n시편1-31"
-                android:textColor="#642104"
-                android:textSize="10sp" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/captuer"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/button_grid3"
-                android:text="캡처" />
+                <Button
+                    android:id="@+id/button45"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/may"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
@@ -169,7 +180,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="24dp"
             android:orientation="vertical"
@@ -183,6 +193,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal"
                 android:weightSum="7">
 
@@ -271,6 +282,15 @@
                         android:text="\n\n"
                         android:textSize="10sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -288,6 +308,15 @@
                         android:text="\n\n"
                         android:textSize="10sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -305,6 +334,15 @@
                         android:text="\n\n"
                         android:textSize="10sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -322,6 +360,15 @@
                         android:text="\n\n"
                         android:textSize="10sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -339,6 +386,15 @@
                         android:text="\n\n"
                         android:textSize="10sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -353,7 +409,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창1-3\n시1"
+                        android:text="\n\n"
                         android:textSize="10sp"
                         android:textStyle="bold" />
 
@@ -363,7 +419,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="1"
                         android:textColor="#000000" />
 
                 </FrameLayout>
@@ -380,8 +435,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창4-6\n시2"
-                        android:textSize="10sp"
+                        android:text="\n삼상10-12\n시121"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -390,7 +445,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="2"
+                        android:text="1"
                         android:textColor="#000000" />
                 </FrameLayout>
 
@@ -404,7 +459,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button8"
@@ -413,12 +468,38 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창7-9\n시3"
-                        android:textSize="10sp"
+                        android:text="\n삼상13-15\n시122"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/day8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="2"
+                        android:textColor="#000000" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_grid"
+                        android:stateListAnimator="@null"
+                        android:text="\n삼상16-18\n시123"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -430,33 +511,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                    <Button
-                        android:id="@+id/button9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_grid"
-                        android:stateListAnimator="@null"
-                        android:text="\n창10-12\n시4"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/day9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:gravity="right"
-                        android:text="4"
-                        android:textColor="#000000" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button10"
@@ -465,12 +520,39 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창13-15\n시5"
-                        android:textSize="10sp"
+                        android:text="\n삼상19-21\n시124"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/day10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="4"
+                        android:textColor="#000000" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_grid"
+                        android:stateListAnimator="@null"
+                        android:text="\n삼상22-24\n시125"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -483,21 +565,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button11"
+                        android:id="@+id/button12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창16-18\n시6"
-                        android:textSize="10sp"
+                        android:text=" \n삼상25-27\n시126"
+                        android:textSize="8sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day11"
+                        android:id="@+id/day12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -510,21 +592,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button12"
+                        android:id="@+id/button13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창19-21\n시7"
-                        android:textSize="10sp"
+                        android:text="\n삼상28-31\n127"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day12"
+                        android:id="@+id/day13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -537,34 +619,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                    <Button
-                        android:id="@+id/button13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_grid"
-                        android:stateListAnimator="@null"
-                        android:text="\n창22-24\n시8"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/day13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:gravity="right"
-                        android:text="8"
-                        android:textColor="#000000" />
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button14"
@@ -573,8 +628,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창25-27\n시9"
-                        android:textSize="10sp"
+                        android:text="\n삼하1-3\n시128"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -583,7 +638,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="9"
+                        android:text="8"
                         android:textColor="#000000" />
 
                 </FrameLayout>
@@ -598,7 +653,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button15"
@@ -607,12 +662,38 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창28-30\n시10"
-                        android:textSize="10sp"
+                        android:text="\n삼하3-6\n시129"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/day15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="9"
+                        android:textColor="#000000" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_grid"
+                        android:stateListAnimator="@null"
+                        android:text="\n삼하7-9\n시130"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -624,21 +705,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button16"
+                        android:id="@+id/button17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창31-33\n시11"
-                        android:textSize="10sp"
+                        android:text="\n삼하10-12\n시131"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day16"
+                        android:id="@+id/day17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -650,21 +731,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button17"
+                        android:id="@+id/button18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창34-36\n시12"
-                        android:textSize="10sp"
+                        android:text="\n삼하13-15\n시132"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day17"
+                        android:id="@+id/day18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -676,21 +757,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button18"
+                        android:id="@+id/button19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창37-39\n시13"
-                        android:textSize="10sp"
+                        android:text="\n삼하16-18\n시133"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day18"
+                        android:id="@+id/day19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -702,21 +783,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button19"
+                        android:id="@+id/button20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창40-42\n시14"
-                        android:textSize="10sp"
+                        android:text="\n삼하19-21\n시134"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day19"
+                        android:id="@+id/day20"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -728,33 +809,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                    <Button
-                        android:id="@+id/button20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_grid"
-                        android:stateListAnimator="@null"
-                        android:text="\n창43-45\n시15"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/day20"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:gravity="right"
-                        android:text="15"
-                        android:textColor="#000000" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button21"
@@ -763,8 +818,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창46-48\n시16"
-                        android:textSize="10sp"
+                        android:text="\n삼하22-24\n시135"
+                        android:textSize="8sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -773,7 +828,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="16"
+                        android:text="15"
                         android:textColor="#000000" />
                 </FrameLayout>
 
@@ -787,7 +842,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button22"
@@ -796,12 +851,38 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n창49-50\n시17"
-                        android:textSize="10sp"
+                        android:text="\n왕상1-3\n시136"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/day22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="16"
+                        android:textColor="#000000" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_grid"
+                        android:stateListAnimator="@null"
+                        android:text="\n왕상4-6\n시137"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day23"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -813,33 +894,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                    <Button
-                        android:id="@+id/button23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_grid"
-                        android:stateListAnimator="@null"
-                        android:text="\n마1-3\n시18"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/day23"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:gravity="right"
-                        android:text="18"
-                        android:textColor="#000000" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button24"
@@ -848,8 +903,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n마4-6\n시19"
-                        android:textSize="10sp"
+                        android:text="\n왕상7-9\n시138"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -858,7 +913,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="19"
+                        android:text="18"
                         android:textColor="#000000" />
                 </FrameLayout>
 
@@ -874,12 +929,38 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n마7-9\n시20"
-                        android:textSize="10sp"
+                        android:text="\n왕상10-12\n시139"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/day25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="19"
+                        android:textColor="#000000" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_grid"
+                        android:stateListAnimator="@null"
+                        android:text="\n왕상13-15\n시140"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day26"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -891,21 +972,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button26"
+                        android:id="@+id/button27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n마10-12\n시21"
-                        android:textSize="10sp"
+                        android:text="\n왕상16-18\n시141"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day26"
+                        android:id="@+id/day27"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -917,33 +998,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                    <Button
-                        android:id="@+id/button27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_grid"
-                        android:stateListAnimator="@null"
-                        android:text="\n마13-15\n시22"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/day27"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:gravity="right"
-                        android:text="22"
-                        android:textColor="#000000" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button28"
@@ -952,8 +1007,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n마16-18\n시23"
-                        android:textSize="10sp"
+                        android:text="\n왕상19-22\n시142"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -962,7 +1017,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="23"
+                        android:text="22"
                         android:textColor="#000000" />
                 </FrameLayout>
 
@@ -976,7 +1031,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button29"
@@ -985,12 +1040,38 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n마19-21\n시24"
-                        android:textSize="10sp"
+                        android:text="\n왕하1-3\n시143"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/day29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="23"
+                        android:textColor="#000000" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_grid"
+                        android:stateListAnimator="@null"
+                        android:text="\n왕하4-6\n시144"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -1002,33 +1083,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                    <Button
-                        android:id="@+id/button30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_grid"
-                        android:stateListAnimator="@null"
-                        android:text="\n마22-24\n시25"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/day30"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:gravity="right"
-                        android:text="23"
-                        android:textColor="#000000" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button31"
@@ -1037,12 +1092,38 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n마25-28\n시26"
-                        android:textSize="10sp"
+                        android:text="\n왕하7-9\n시145"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/day31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="25"
+                        android:textColor="#000000" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_grid"
+                        android:stateListAnimator="@null"
+                        android:text="\n왕하10-12\n시146"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/day32"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -1054,21 +1135,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button32"
+                        android:id="@+id/button33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n출1-3\n시27"
-                        android:textSize="10sp"
+                        android:text="\n왕하13-15\n시147"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day32"
+                        android:id="@+id/day33"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -1080,21 +1161,21 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
-                        android:id="@+id/button33"
+                        android:id="@+id/button34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n출4-6\n시28"
-                        android:textSize="10sp"
+                        android:text="\n왕하16-18\n시148"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/day33"
+                        android:id="@+id/day34"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
@@ -1106,33 +1187,7 @@
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                    <Button
-                        android:id="@+id/button34"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_grid"
-                        android:stateListAnimator="@null"
-                        android:text="\n출7-9\n시29"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/day34"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:gravity="right"
-                        android:text="29"
-                        android:textColor="#000000" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button35"
@@ -1141,8 +1196,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n출10-12\n시30"
-                        android:textSize="10sp"
+                        android:text="\n왕하19-21\n시149"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -1151,8 +1206,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="30"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        tools:text="29" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -1160,12 +1215,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button36"
@@ -1174,9 +1230,10 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n출13-15\n시31"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:text="\n왕하22-25\n시150"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
 
                     <TextView
                         android:id="@+id/textView47"
@@ -1184,14 +1241,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="4dp"
                         android:gravity="right"
-                        android:text="31"
+                        android:text="30"
                         android:textColor="#000000" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button37"
@@ -1200,15 +1257,26 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_grid"
                         android:stateListAnimator="@null"
-                        android:text="\n\n"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:text="\n롬1-3\n시1"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="31"
+                        android:textColor="#000000" />
+
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button38"
@@ -1219,13 +1287,14 @@
                         android:stateListAnimator="@null"
                         android:text="\n\n"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button39"
@@ -1236,13 +1305,14 @@
                         android:stateListAnimator="@null"
                         android:text="\n\n"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button40"
@@ -1253,13 +1323,14 @@
                         android:stateListAnimator="@null"
                         android:text="\n\n"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button41"
@@ -1270,13 +1341,14 @@
                         android:stateListAnimator="@null"
                         android:text="\n\n"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/button42"
@@ -1287,7 +1359,8 @@
                         android:stateListAnimator="@null"
                         android:text="\n\n"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -1298,10 +1371,10 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="성경을 단단히 붙잡으라. 성경에 단단히 붙잡힐 때까지 - 윌리엄 호튼"
+        android:layout_marginBottom="40dp"
+        android:text="우리의 염려와 두려움의 절반은 성경을 읽지 않는 데서 기인한다. -팔스 스펄전"
         android:textColor="#000000"
-        android:textSize="10sp"
+        android:textSize="9sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
