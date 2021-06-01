@@ -20,7 +20,7 @@ import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView jan,feb,mar,apr,may;
+    TextView jan,feb,mar,apr,may,jun;
     private static final int MY_PERMISSION_STORAGE = 1111;
 
     @Override
@@ -63,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplication(),MayActivity.class));
+            }
+        });
+        jun = findViewById(R.id.jun);
+        jun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplication(),JunActivity.class));
             }
         });
     }

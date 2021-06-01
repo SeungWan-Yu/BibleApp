@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MayActivity"></activity>
+        <activity android:name=".JunActivity"></activity>
+        <activity android:name=".MayActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,7 @@
         <activity android:name=".FebActivity" />
         <activity android:name=".MarActivity" />
         <activity android:name=".AprActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
