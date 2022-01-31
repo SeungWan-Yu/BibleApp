@@ -1,15 +1,15 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <solid android:color="#fff" /> //배경색
+    <solid android:color="#D0B5A8A8" /> //배경색
 
     <stroke
         android:width="0.5dp"
-        android:color="#111" /> //선색
-    <corners
-        android:topLeftRadius="10dp"
-        android:topRightRadius="10dp"
-        android:bottomLeftRadius="10dp"
-        android:bottomRightRadius="10dp"  /> // 선 휘는각도
+        android:color="#00111111" /> //선색
+<!--    <corners-->
+<!--        android:topLeftRadius="10dp"-->
+<!--        android:topRightRadius="10dp"-->
+<!--        android:bottomLeftRadius="10dp"-->
+<!--        android:bottomRightRadius="10dp"  /> // 선 휘는각도-->
 
     />
 

@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:gravity="bottom|center_horizontal"
-                    android:text="2021"
+                    android:text="2022"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp" />
 
