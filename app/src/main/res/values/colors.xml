@@ -5,5 +5,9 @@
     <color name="colorAccent">#D81B60</color>
     <color name="may">#3E8B65</color>
     <color name="jan">#774848</color>
+    <color name="apr_main">#5A7C33</color>
+    <color name="apr_sub">#C9D1C1</color>
+    <color name="apr_select">#74984D</color>
+
 
 </resources>
